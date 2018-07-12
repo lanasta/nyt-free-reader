@@ -18,6 +18,9 @@ function hideBlockers(){
     if (subscribePopup == null && hidden && v1Paywall){
       $("body").css("background", originalBg);
       $("#app").show();
+        var resizeEvent = new Event('resize');
+ 		window.dispatchEvent(resizeEvent);
+    	stopChecker();
     }
     $("." + subscribePopup).remove();
     $(".css-mcm29f").css("position", "relative");
