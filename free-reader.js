@@ -16,12 +16,13 @@ function hideBlockers(){
         v1Paywall = true;
     }
     if (subscribePopup == null && hidden && v1Paywall){
-      stopChecker();
       $("body").css("background", originalBg);
       $("#app").show();
     }
     $("." + subscribePopup).remove();
     $(".css-mcm29f").css("position", "relative");
+    $(".css-1bd8bfl").css("background", "transparent");
+
     if (!$("body").hasClass('[class*=DockGateway]')){
       hidden = true;
     }
