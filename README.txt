@@ -22,11 +22,6 @@ the Extensions page manually.
 3.Click "Load Unpacked" and open the NYT Free Reader folder.
 4.Go to https://nytimes.com to view articles.
 
-*If you wish to switch the loading screen, simply open free-reader.js
-and switch the gif url out with a link of the gif you’d like to use.
-Try this one for example:
-http://gifimage.net/wp-content/uploads/2017/08/matrix-code-gif-12.gif
-
 Credits:
 https://www.outline.com
 Google Chrome Extensions API Documentation
