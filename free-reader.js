@@ -25,6 +25,8 @@ function hideBlockers(){
     $("." + subscribePopup).remove();
     $(".css-mcm29f").css("position", "relative");
     $(".css-1bd8bfl").css("background", "transparent");
+    var subscribeInline= $("body").find('div[class*=InlineMessage]').attr('class');
+    $("." + subscribeInline).remove();
 
     if (!$("body").hasClass('[class*=DockGateway]')){
       hidden = true;
