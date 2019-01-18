@@ -9,7 +9,7 @@ function hideBlockers(){
     if ($("#gatewayCreative").length > 0){
         window.location.href = "https://outline.com/" + document.URL;
     }
-    var subscribePopup = $("body").find('div[class*=DockGateway]').attr('class');
+    var subscribePopup = $("body").find('div[data-testid*=dock-gateway]').attr('class');
     if (subscribePopup != null){
         $("body").css("background", "url('https://loading.io/spinners/spin/lg.ajax-spinner-gif.gif') no-repeat center");
         $("#app").hide();
@@ -27,8 +27,12 @@ function hideBlockers(){
     $(".css-1bd8bfl").css("background", "transparent");
     var subscribeInline= $("body").find('div[class*=InlineMessage]').attr('class');
     $("." + subscribeInline).remove();
-
-    if (!$("body").hasClass('[class*=DockGateway]')){
+    var ads = $("body").find('div[id^="story-ad"]').attr('class');
+    while (ads != null){
+	$("." + ads).remove();
+	ads = $("body").find('div[id^="story-ad"]').attr('class');
+    }
+    if (!$("body").hasClass(subscribePopup)){
       hidden = true;
     }
     stopChecker();
